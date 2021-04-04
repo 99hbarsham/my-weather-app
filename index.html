@@ -16,31 +16,24 @@
 <body>
     <div class="container">
         <div class="row g-5">
-            <div class="col-2">
+            <div class="col-3">
                 <div class="header">
                     <div class="card-body body-header">
                         <h1>Current city | </h1>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-               <form class="row g-3" id="inputCityForm">
-                    <div class="col-8">
-                        <label for="inputCity" class="visually-hidden">Search for another city</label>
-                        <input type="text" class="form-control" id="inputCity1" placeholder="Search for another city..." required>
-                        <input type="submit" value = "🔎" class="button">
-                    </div>
-                    
+            <div class="col-5">
+               <form id="inputCityForm">
+                    <label for="inputCity" class="visually-hidden">Search for another city</label>
+                    <input type="text" class="form-control" id="inputCity1" placeholder="Search for another city..." required>
+                    <input type="submit" value = "🔎" class="searchbutton"> 
                 </form>
             </div>
-            <div class="col-3">
-                <div class="row g-3">
-                    <div class="col-5">
-                        <button class="button">
-                            Get geolocation
-                        </button>
-                    </div>
-                </div>
+            <div class="col-2">
+                <button class="button">
+                    Get geolocation
+                </button>
             </div>
         </div>
         <div class="row">
