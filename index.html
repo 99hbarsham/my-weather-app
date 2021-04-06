@@ -15,76 +15,71 @@
 </head>
 <body>
     <div class="container">
-        <div class="row g-5">
-            <div class="col-3">
-                <div class="header">
-                    <div class="card-body body-header">
-                        <h1>Current city | </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-5">
-               <form id="inputCityForm">
+        <div class="row g-3">
+            <form id="inputCityForm" class="row g-3">
+                <div class="col-auto">
                     <label for="inputCity" class="visually-hidden">Search for another city</label>
-                    <input type="text" class="form-control" id="inputCity1" placeholder="Search for another city..." required>
-                    <input type="submit" value = "🔎" class="searchbutton"> 
-                </form>
-            </div>
-            <div class="col-2">
+                    <input type="text" class="form-control" id="inputCity1" placeholder="Search for a city" required>
+                </div>
+                <div class="col-auto">
+                    <input type="submit" value="🔎">
+                </div>
+            </form>
+            <div class="col-sm-6">
                 <button class="button">
                     Get geolocation
                 </button>
             </div>
         </div>
+        <div class="row g-3">
+            <h1>
+                Selected city
+            </h1>
+        </div>
         <div class="row">
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <i class="fas fa-cloud-sun"></i>
-                    <div class="card-body">
-                        <h5 class="card-title today">Today</h5>
-                        <p class="card-text" id="todaysWeather">17 ℃</p>
-                        <a href="https://www.google.com" target="_blank" class="learnmore" id="todaysWeatherCelsius">
-                            ℃
-                        </a>
-                        <a href="https://www.google.com" target="_blank" class="learnmore" id="todaysWeatherFahreinheit">
-                            ℉
-                        </a>
-                    </div>
+            <div class="card" style="width: 18rem;">
+                <i class="fas fa-cloud-sun"></i>
+                <div class="card-body">
+                    <h5 class="card-title today">Today</h5>
+                    <p class="card-text" id="todaysWeather">17 ℃</p>
+                    <a href="https://www.google.com" target="_blank" class="learnmore" id="todaysWeatherCelsius">
+                        ℃
+                    </a>
+                    <a href="https://www.google.com" target="_blank" class="learnmore" id="todaysWeatherFahreinheit">
+                        ℉
+                    </a>
                 </div>
             </div>
-            <div class="col-sm-9">
-                <div class="row">
-                    <div class="col-8 col-sm-4">
-                        <div class="card" style="width: 18rem;">
-                            <i class="fas fa-sun"></i>
-                            <div class="card-body">
-                                <h5 class="card-title">Tomorrow</h5>
-                                <p class="card-text">Some text about the weather</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-8 col-sm-4">
-                        <div class="card" style="width: 18rem;">
-                            <i class="fas fa-sun"></i>
-                            <div class="card-body">
-                                <h5 class="card-title">Wednesday</h5>
-                                <p class="card-text">Some text about the weather</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-8 col-sm-4">
-                        <div class="card" style="width: 18rem;">
-                            <i class="fas fa-cloud-sun"></i>
-                            <div class="card-body">
-                                <h5 class="card-title">Thursday</h5>
-                                <p class="card-text">Some text about the weather</p>
-                            </div>
+            <div class="row g-2">
+                <div class="col">
+                    <div class="p-1 border bg-light">
+                        <i class="fas fa-sun"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Tomorrow</h5>
+                            <p class="card-text">Some text about the weather</p>
                         </div>
                     </div>
                 </div>
-            <div class="row">
-                <div class="col-8 col-sm-4">
-                    <div class="card" style="width: 18rem;">
+                <div class="col">
+                    <div class="p-1 border bg-light">
+                        <i class="fas fa-sun"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Wednesday</h5>
+                            <p class="card-text">Some text about the weather</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-1 border bg-light">
+                        <i class="fas fa-cloud-sun"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Thursday</h5>
+                            <p class="card-text">Some text about the weather</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-1 border bg-light">
                         <i class="fas fa-cloud"></i>
                         <div class="card-body">
                             <h5 class="card-title">Friday</h5>
@@ -92,8 +87,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-8 col-sm-4">
-                    <div class="card" style="width: 18rem;">
+                <div class="col">
+                    <div class="p-1 border bg-light">
                         <i class="fas fa-cloud-rain"></i>
                         <div class="card-body">
                             <h5 class="card-title">Saturday</h5>
@@ -102,7 +97,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
         <div class="row">
             <div class="col-10">
                 <div class="card footer">

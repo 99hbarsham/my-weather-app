@@ -22,7 +22,7 @@ function displayCity(event) {
   event.preventDefault();
   let city = document.querySelector("#inputCity1")
   city = city.value;
-  h1.innerHTML = `Current city | ${city}`
+  h1.innerHTML = `${city}`
   let apiKey = "7a61ea414ddbfb5e7496aa625238c0b3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(currentTemp)
