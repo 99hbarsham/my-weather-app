@@ -34,69 +34,76 @@
         <div class="row g-3">
             <h1 id="inputtedCity"></h1>
         </div>
-        <div class="row">
-            <div class="card" style="width: 18rem;">
+        <div class="row todayWeatherRow">
+            <div class="col-3">
                 <i class="fas fa-cloud-sun"></i>
-                <div class="card-body">
-                    <h5 class="card-title today">Today</h5>
-                    <p class="card-text" id="todaysTemperature"></p>
-                    <p class="card-text todaysDescription" id="todaysDescription"></p>
-                    <a href="https://www.google.com" target="_blank" class="learnmore" id="todaysWeatherCelsius">
-                        ℃
-                    </a>
-                    <a href="https://www.google.com" target="_blank" class="learnmore" id="todaysWeatherFahreinheit">
-                        ℉
-                    </a>
-                </div>
             </div>
-            <div class="row g-2">
-                <div class="col">
-                    <div class="p-1 border bg-light">
-                        <i class="fas fa-sun"></i>
-                        <div class="card-body">
-                            <h5 class="card-title">Tomorrow</h5>
-                            <p class="card-text">Some text about the weather</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-1 border bg-light">
-                        <i class="fas fa-sun"></i>
-                        <div class="card-body">
-                            <h5 class="card-title">Wednesday</h5>
-                            <p class="card-text">Some text about the weather</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-1 border bg-light">
-                        <i class="fas fa-cloud-sun"></i>
-                        <div class="card-body">
-                            <h5 class="card-title">Thursday</h5>
-                            <p class="card-text">Some text about the weather</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-1 border bg-light">
-                        <i class="fas fa-cloud"></i>
-                        <div class="card-body">
-                            <h5 class="card-title">Friday</h5>
-                            <p class="card-text">Some text about the weather</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-1 border bg-light">
-                        <i class="fas fa-cloud-rain"></i>
-                        <div class="card-body">
-                            <h5 class="card-title">Saturday</h5>
-                            <p class="card-text">Some text about the weather</p>
-                        </div>
+            <div class="col-3">
+                <h5 class="today">Today</h5>
+                <p id="todaysTemperature"></p>
+                <p todaysDescription" id="todaysDescription"></p>
+                <a href="https://www.google.com" target="_blank" class="learnmore" id="todaysWeatherCelsius">
+                    ℃
+                </a>
+                <a href="https://www.google.com" target="_blank" class="learnmore" id="todaysWeatherFahreinheit">
+                    ℉
+                </a>
+            </div>
+            <div class="col-3">
+                <ul>
+                    <li>humidity</li>
+                    <li>wind speed</li>
+                    <li>precipitation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col">
+                <div class="p-1 border bg-light">
+                    <i class="fas fa-sun"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Tomorrow</h5>
+                        <p class="card-text">Some text about the weather</p>
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <div class="p-1 border bg-light">
+                    <i class="fas fa-sun"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Wednesday</h5>
+                        <p class="card-text">Some text about the weather</p>
+                    </div>
+                </div>
             </div>
+            <div class="col">
+                <div class="p-1 border bg-light">
+                    <i class="fas fa-cloud-sun"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Thursday</h5>
+                        <p class="card-text">Some text about the weather</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-1 border bg-light">
+                    <i class="fas fa-cloud"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Friday</h5>
+                        <p class="card-text">Some text about the weather</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-1 border bg-light">
+                    <i class="fas fa-cloud-rain"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Saturday</h5>
+                        <p class="card-text">Some text about the weather</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-10">
                 <div class="card footer">
