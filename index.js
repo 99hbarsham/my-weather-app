@@ -12,11 +12,23 @@ function setDate(date) {
 let date = new Date();
 setDate(date);
 
+function currentExtras(response) {
+  let cityHumidity = response.data.main.humidity;
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = `Humidity: ${cityHumidity}%`
+  let cityWindSpeed = response.data.wind.speed;
+  let windSpeed = document.querySelector("#windSpeed");
+  windSpeed.innerHTML = `Wind speed: ${cityWindSpeed} m/s`
+  //let cityPrecipitation = response.data.main.precipitation;
+  //let precipitation = document.querySelector("#precipitation");
+  //precipitation.innerHTML = `Precipitation: ${cityPrecipitation}`
+}
 
 function currentDesc(response) {
   let cityDesc = response.data.weather[0].description;
   let description = document.querySelector("#todaysDescription");
   description.innerHTML = `${cityDesc}`
+  currentExtras(response)
 }
 
 function currentTemp(response) {
@@ -24,7 +36,6 @@ function currentTemp(response) {
   let temperature = document.querySelector("#todaysTemperature");
   temperature.innerHTML = `${cityTemp}℃`
   currentDesc(response)
-  currentDate(response)
 }
 
 function displayCity(event) {

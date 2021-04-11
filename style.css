@@ -94,10 +94,16 @@ body {
 .todaysTemperature {
   font-size: 25px;
   color: #081424;
+}
 
 .container {
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #266ec5;
+}
+
+li {
+  list-style-type: none;
+  color: rgb(46, 45, 59);
 }
