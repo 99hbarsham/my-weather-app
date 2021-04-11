@@ -12,10 +12,17 @@ function setDate(date) {
 let date = new Date();
 setDate(date);
 
+function currentDesc(response) {
+  let cityDesc = response.data.weather[0].description;
+  let description = document.querySelector("#todaysDescription");
+  description.innerHTML = `${cityDesc}`
+}
+
 function currentTemp(response) {
   let cityTemp = Math.round(response.data.main.temp);
-  let temperature = document.querySelector("#todaysWeather");
+  let temperature = document.querySelector("#todaysTemperature");
   temperature.innerHTML = `${cityTemp}℃`
+  currentDesc(response)
 }
 
 function displayCity(event) {

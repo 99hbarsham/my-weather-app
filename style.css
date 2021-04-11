@@ -84,3 +84,7 @@ body {
   text-align: center;
   padding: 2px;
 }
+
+.todaysDescription::first-letter {
+  text-transform: capitalize;
+}
