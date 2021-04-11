@@ -35,6 +35,10 @@ function currentTemp(response) {
   let cityTemp = Math.round(response.data.main.temp);
   let temperature = document.querySelector("#todaysTemperature");
   temperature.innerHTML = `${cityTemp}℃`
+  let cityIcon = response.data.weather[0].icon;
+  let icon = document.querySelector("#weatherIcon");
+  icon.setAttribute("src", `http://openweathermap.org/img/wn/${cityIcon}@2x.png`)
+  icon.setAttribute("alt", `response.data.weather[0].description`)
   currentDesc(response)
 }
 
