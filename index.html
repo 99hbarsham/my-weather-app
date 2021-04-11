@@ -16,32 +16,36 @@
 <body>
     <div class="container">
         <div class="row g-3">
-            <form id="inputCityForm" class="row g-3">
-                <div class="col-auto">
-                    <label for="inputCity" class="visually-hidden">Search for another city</label>
-                    <input type="text" class="form-control" id="inputCity1" placeholder="Search for a city" required>
-                </div>
-                <div class="col-auto">
-                    <input type="submit" value="🔎">
-                </div>
-            </form>
-            <div class="col-sm-6">
+            <div class=col-sm-4">
+                <form id="inputCityForm" class="row g-3">
+                    <div class="col-auto">
+                        <label for="inputCity" class="visually-hidden">Search for another city</label>
+                        <input type="text" class="form-control" id="inputCity1" placeholder="Search for a city" required>
+                    </div>
+                    <div class="col-auto">
+                        <input type="submit" value="🔎">
+                    </div>
+                </form>
+            </div>
+            <div class="col-4">
                 <button class="button">
                     Get geolocation
                 </button>
             </div>
         </div>
-        <div class="row g-3">
-            <h1 id="inputtedCity"></h1>
+        <div class="row selectedLocation">
+            <div class="col-9">
+                <h1 id="inputtedCity"></h1>
+                <h5 class="today">Today</h5>
+            </div>
         </div>
         <div class="row todayWeatherRow">
             <div class="col-3">
                 <i class="fas fa-cloud-sun"></i>
             </div>
             <div class="col-3">
-                <h5 class="today">Today</h5>
-                <p id="todaysTemperature"></p>
-                <p todaysDescription" id="todaysDescription"></p>
+                <p id="todaysTemperature" class="todaysTemperature"></p>
+                <p class="todaysDescription" id="todaysDescription"></p>
                 <a href="https://www.google.com" target="_blank" class="learnmore" id="todaysWeatherCelsius">
                     ℃
                 </a>

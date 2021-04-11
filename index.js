@@ -6,11 +6,12 @@ function setDate(date) {
   let time = date.getHours();
   let mins = date.getMinutes();
 
-  today.innerHTML = `${day} ${time}:${mins}`
+  today.innerHTML = `${day} ${time}:${mins} (GMT)`
 }
 
 let date = new Date();
 setDate(date);
+
 
 function currentDesc(response) {
   let cityDesc = response.data.weather[0].description;
@@ -23,6 +24,7 @@ function currentTemp(response) {
   let temperature = document.querySelector("#todaysTemperature");
   temperature.innerHTML = `${cityTemp}℃`
   currentDesc(response)
+  currentDate(response)
 }
 
 function displayCity(event) {
@@ -39,7 +41,7 @@ function showPosition(position) {
   console.log(position)
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  h1.innerHTML = `Current coordinates | ${lat} by ${lon}`
+  h1.innerHTML = `${lat} by ${lon}`
   let apiKey = "7a61ea414ddbfb5e7496aa625238c0b3";
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
