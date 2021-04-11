@@ -106,4 +106,6 @@ body {
 li {
   list-style-type: none;
   color: rgb(46, 45, 59);
+  font-size: 15px;
+  padding: 5px;
 }
