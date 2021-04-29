@@ -92,8 +92,12 @@ body {
 }
 
 .todaysTemperature {
-  font-size: 25px;
+  font-size: 30px;
   color: #081424;
+}
+
+.weather-units {
+  padding: 4px 0px;
 }
 
 .container {
@@ -108,4 +112,10 @@ li {
   color: rgb(46, 45, 59);
   font-size: 15px;
   padding: 5px;
+}
+
+.weather-units .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
 }

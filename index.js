@@ -34,12 +34,15 @@ function currentDesc(response) {
 function currentTemp(response) {
   let cityTemp = Math.round(response.data.main.temp);
   let temperature = document.querySelector("#todaysTemperature");
-  temperature.innerHTML = `${cityTemp}℃`
+  temperature.innerHTML = `${cityTemp}`
   let cityIcon = response.data.weather[0].icon;
   let icon = document.querySelector("#weatherIcon");
   icon.setAttribute("src", `http://openweathermap.org/img/wn/${cityIcon}@2x.png`)
   icon.setAttribute("alt", `response.data.weather[0].description`)
+  console.log(response.data)
   currentDesc(response)
+  celsiusTemperature = response.data.main.temp
+
 }
 
 function displayCity(event) {
@@ -71,25 +74,29 @@ function getGeolocation() {
 let button = document.querySelector("button");
 button.addEventListener("click", getGeolocation)
 
-
+let h1 = document.querySelector("h1");
 let form = document.querySelector("#inputCityForm");
-let h1 = document.querySelector("h1")
 form.addEventListener("submit", displayCity);
+
+
 
 function changeWeatherToFahreinheit(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#todaysWeather");
-  temperature.innerHTML = `67 ℉`
+  let temperature = document.querySelector("#todaysTemperature");
+  let fahreinheitTemperature = ((9/5)*celsiusTemperature + 32)
+  temperature.innerHTML = Math.round(`${fahreinheitTemperature}`)
 }
+
+let celsiusTemperature = null;
 
 function changeWeatherToCelsius(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#todaysWeather");
-  temperature.innerHTML = `17 ℃`
+  let temperature = document.querySelector("#todaysTemperature");
+  temperature.innerHTML = Math.round(celsiusTemperature)
 }
 
-//let fahreinheitConvert = document.querySelector("#todaysWeatherFahreinheit")
-//let celsiusConvert = document.querySelector("#todaysWeatherCelsius")
+let fahreinheitConvert = document.querySelector("#todaysWeatherFahreinheit")
+let celsiusConvert = document.querySelector("#todaysWeatherCelsius")
 
-//fahreinheitConvert.addEventListener("click", changeWeatherToFahreinheit)
-//celsiusConvert.addEventListener("click", changeWeatherToCelsius)
+fahreinheitConvert.addEventListener("click", changeWeatherToFahreinheit)
+celsiusConvert.addEventListener("click", changeWeatherToCelsius)
