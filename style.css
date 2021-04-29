@@ -12,16 +12,22 @@ h1 {
   padding: 10px 0px 0px 0px;
 }
 
-h5 {
-  font-size: 20px;
-  color: #081424;
+.forecast-day {
+  font-size: 15px;
+  padding: 2px;
+}
+
+.g-2 {
 }
 
 i {
-  font-size: 70px;
+  font-size: 30px;
   color: #266ec5;
-  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .button {
   display: block;
   border: 1px solid #266ec5;
@@ -118,4 +124,8 @@ li {
   color: black;
   cursor: default;
   text-decoration: none;
+}
+
+.weather-forecast {
+  text-align: center;
 }
