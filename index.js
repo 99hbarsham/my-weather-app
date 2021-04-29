@@ -83,6 +83,8 @@ form.addEventListener("submit", displayCity);
 function changeWeatherToFahreinheit(event) {
   event.preventDefault();
   let temperature = document.querySelector("#todaysTemperature");
+  celsiusConvert.classList.remove("active");
+  fahreinheitConvert.classList.add("active");
   let fahreinheitTemperature = ((9/5)*celsiusTemperature + 32)
   temperature.innerHTML = Math.round(`${fahreinheitTemperature}`)
 }
@@ -92,6 +94,8 @@ let celsiusTemperature = null;
 function changeWeatherToCelsius(event) {
   event.preventDefault();
   let temperature = document.querySelector("#todaysTemperature");
+  celsiusConvert.classList.add("active");
+  fahreinheitConvert.classList.remove("active");
   temperature.innerHTML = Math.round(celsiusTemperature)
 }
 
