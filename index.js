@@ -6,6 +6,10 @@ function setDate(date) {
   let time = date.getHours();
   let mins = date.getMinutes();
 
+  if (date.getMinutes() < 10) {
+    mins = `0`+mins
+  }
+
   today.innerHTML = `${day} ${time}:${mins} (GMT)`
 }
 
@@ -32,6 +36,9 @@ function currentDesc(response) {
 }
 
 function currentTemp(response) {
+  let city = document.querySelector("#inputCity1")
+  city = response.data.name;
+  h1.innerHTML = `${city}`
   let cityTemp = Math.round(response.data.main.temp);
   let temperature = document.querySelector("#todaysTemperature");
   temperature.innerHTML = `${cityTemp}`
@@ -39,17 +46,19 @@ function currentTemp(response) {
   let icon = document.querySelector("#weatherIcon");
   icon.setAttribute("src", `http://openweathermap.org/img/wn/${cityIcon}@2x.png`)
   icon.setAttribute("alt", `response.data.weather[0].description`)
-  console.log(response.data)
+  console.log(response)
   currentDesc(response)
   celsiusTemperature = response.data.main.temp
 
 }
 
-function displayCity(event) {
+function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#inputCity1")
-  city = city.value;
-  h1.innerHTML = `${city}`
+  let cityInputElement = document.querySelector("#inputCity1")
+  search(cityInputElement.value);
+}
+
+function search(city) {
   let apiKey = "7a61ea414ddbfb5e7496aa625238c0b3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(currentTemp)
@@ -76,7 +85,9 @@ button.addEventListener("click", getGeolocation)
 
 let h1 = document.querySelector("h1");
 let form = document.querySelector("#inputCityForm");
-form.addEventListener("submit", displayCity);
+form.addEventListener("submit", handleSubmit);
+
+search("New York")
 
 
 
