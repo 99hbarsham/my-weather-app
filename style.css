@@ -17,7 +17,20 @@ h1 {
   padding: 2px;
 }
 
-.g-2 {
+.g-3 {
+  margin: 0px;
+  border: none;
+  transition: 200ms ease-in-out;
+  display: block;
+  padding: 10px;
+  margin: 0px;
+}
+
+.g-3:hover {
+  background: rgb(38, 110, 197, 0.1);
+  color: #1e506f;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 i {
