@@ -35,6 +35,31 @@ function currentDesc(response) {
   currentExtras(response)
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  days.forEach(function(day) {
+    forecastHTML = forecastHTML + `
+      <div class="col g-3 forecastCol">
+          <i class="fas fa-sun"></i>
+          <div class="forecast-day">${day}</div>
+          <div class="forecast-temp">
+              <span class="weather-forecast-max">12</span>
+              <span class="weather-forecast-min">7</span>
+          </div>
+      </div>
+    
+    `
+  })
+
+  forecastHTML = forecastHTML + `</div/>`
+    
+  forecastElement.innerHTML = forecastHTML
+}
+
 function currentTemp(response) {
   let city = document.querySelector("#inputCity1")
   city = response.data.name;
@@ -46,10 +71,12 @@ function currentTemp(response) {
   let icon = document.querySelector("#weatherIcon");
   icon.setAttribute("src", `http://openweathermap.org/img/wn/${cityIcon}@2x.png`)
   icon.setAttribute("alt", `response.data.weather[0].description`)
-  console.log(response)
+  
   currentDesc(response)
+  
   celsiusTemperature = response.data.main.temp
-
+  
+  displayForecast()
 }
 
 function handleSubmit(event) {
