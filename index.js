@@ -10,7 +10,7 @@ function setDate(date) {
     mins = `0`+mins
   }
 
-  today.innerHTML = `${day} ${time}:${mins} (GMT)`
+  today.innerHTML = `Last updated: ${day} ${time}:${mins} (GMT)`
 }
 
 let date = new Date();
