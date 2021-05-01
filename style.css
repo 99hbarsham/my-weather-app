@@ -139,8 +139,8 @@ body {
 }
 
 .container {
-  max-width: 600px;
-  margin: 10px;
+  max-width: 500px;
+  margin: 0 auto;
   padding: 20px;
   border: 1px solid #266ec5;
   border-radius: 5px;
